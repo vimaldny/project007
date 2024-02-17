@@ -1,0 +1,9 @@
+---
+- name: COPY ON TEST SERVER
+  hosts: Test
+  become: yes
+  tasks:
+    - name: Copy develop branch code on Test server
+      copy:
+        src: /var/lib/jenkins/workspace/assign2-test
+        dest: /var/www/html
